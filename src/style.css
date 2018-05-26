@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bounce';
+    src: url('./Bounce.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: 'Bounce';
+    background: url('./github.png');
+}
