@@ -5,15 +5,22 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/index.js',
+        another: './src/another-module.js'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Production'
+            title: 'Code splitting'
         })
     ],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    optimization: {
+        // 防止重复
+        splitChunks: {
+            chunks: 'all'
+        }
     }
 }
