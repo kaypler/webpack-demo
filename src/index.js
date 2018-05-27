@@ -6,7 +6,7 @@ function component() {
     var btn = document.createElement('button');
 
     // Lodash, now imported by this scrpt
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'Webpack'], ' ');
 
     btn.innerHTML = 'Click me and check the console!';
     btn.onclick = printMe;
